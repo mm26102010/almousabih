@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المسبّح</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      background-color: #e8f0fe;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #333;
+    }
+
+    #count {
+      font-size: 60px;
+      margin: 30px 0;
+      color: #007bff;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 15px 30px;
+      margin: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #reset {
+      background-color: #dc3545;
+    }
+
+    #reset:hover {
+      background-color: #c82333;
+    }
+
+    .ayah {
+      margin-top: 40px;
+      font-size: 24px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .palestine {
+      margin-top: 15px;
+      font-size: 20px;
+      color: #b22222;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>المسبّح</h1>
+
+
+  <div id="count">0</div>
+
+  <button onclick="increaseCount()">زيادة</button>
+  <button id="reset" onclick="resetCount()">إعادة ضبط</button>
+
+  <div class="ayah">﴿ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ ﴾</div>
+  <div class="palestine">لا تنسوا الدعاء لإخواننا في فلسطين</div>
+
+  <script>
+    let counter = 0;
+
+    function increaseCount() {
+      counter++;
+      document.getElementById('count').textContent = counter;
+    }
+
+    function resetCount() {
+      counter = 0;
+      document.getElementById('count').textContent = counter;
+    }
+  </script>
+
+</body>
+</html>
